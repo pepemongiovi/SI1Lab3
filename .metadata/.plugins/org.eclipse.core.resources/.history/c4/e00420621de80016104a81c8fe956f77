@@ -1,0 +1,32 @@
+package service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import model.ToDoList;
+import repository.ToDoListRepository;
+
+@Service
+public class ToDoListService {
+	
+	@Autowired
+	private ToDoListRepository toDoListRepository;
+	
+	public ToDoList saveInDB(ToDoList toDoList) {
+		
+		return toDoListRepository.save(toDoList);
+	}
+	
+	public Collection<ListaDeTarefas> buscaTarefas() {
+		
+		return this.toDoListRepository.findAll();
+	}
+	
+	public void excluirTarefa(ListaDeTarefas task) {
+		this.toDoListRepository.delete(task);
+	}
+	
+	public ListaDeTarefas buscaPorId(Long id) {
+		return this.toDoListRepository.findOne(id);
+	}
+}

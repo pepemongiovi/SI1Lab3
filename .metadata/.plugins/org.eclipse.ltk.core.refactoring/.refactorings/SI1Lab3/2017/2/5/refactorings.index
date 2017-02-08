@@ -1,0 +1,20 @@
+1485907884072	Delete element
+1485907894940	Delete element
+1485912510186	Rename method 'searchById'
+1485912517257	Rename method 'searchTasks'
+1485912543204	Rename method 'getTaskByID'
+1485912568778	Rename method 'getTasks'
+1485912581279	Rename method 'getByID'
+1485912590027	Rename method 'getById'
+1485912787864	Rename method 'getTaskById'
+1485912819038	Rename method 'getListByID'
+1485912826305	Rename method 'getTaskByID'
+1485915010892	Move compilation unit
+1485915084766	Copy package
+1485915103370	Delete element
+1485915127959	Rename package 'controller'
+1485915143161	Rename package 'silab3'
+1485915160770	Rename package 'service'
+1485915194016	Rename package 'model'
+1485915213711	Rename package 'repository'
+1485915356686	Rename type 'Si1Lab3Application'

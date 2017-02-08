@@ -1,0 +1,72 @@
+package model;
+
+import java.util.ArrayList;
+
+public class Task {
+	private String description;
+	private String detailedDescription;
+	private boolean finished;
+	private Priority priority;
+	private String category;
+	private ArrayList<String> subtasks;
+	
+	public Task(String description, String detailedDescription, Priority priority, String category){
+		this.description = description;
+		this.detailedDescription = detailedDescription;
+		this.priority = priority;
+		this.category = category;
+		this.finished = false;
+		this.subtasks = new ArrayList();
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getDetailedDescription() {
+		return detailedDescription;
+	}
+
+	public void setDetailedDescription(String detailedDescription) {
+		this.detailedDescription = detailedDescription;
+	}
+
+	public boolean isFinished() {
+		return finished;
+	}
+
+	public void setFinished(boolean finished) {
+		this.finished = finished;
+	}
+
+	public Priority getPriority() {
+		return priority;
+	}
+
+	public void setPriority(Priority priority) {
+		this.priority = priority;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public ArrayList getSubtasks() {
+		return subtasks;
+	}
+
+	public void setSubtasks(ArrayList subtasks) {
+		this.subtasks = subtasks;
+	}
+	
+	
+	
+}

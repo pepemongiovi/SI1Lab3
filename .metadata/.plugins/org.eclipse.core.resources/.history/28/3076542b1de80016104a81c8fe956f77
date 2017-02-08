@@ -1,0 +1,25 @@
+package service;
+
+public class ToDoListService {
+	
+	@Autowired
+	private ListaDeTarefasRepository listaDeTarefasRepository;
+	
+	public ListaDeTarefas salvarNoBanco(ListaDeTarefas listaDetarefas) {
+		
+		return listaDeTarefasRepository.save(listaDetarefas);
+	}
+	
+	public Collection<ListaDeTarefas> buscaTarefas() {
+		
+		return this.listaDeTarefasRepository.findAll();
+	}
+	
+	public void excluirTarefa(ListaDeTarefas tarefa) {
+		this.listaDeTarefasRepository.delete(tarefa);
+	}
+	
+	public ListaDeTarefas buscaPorId(Long id) {
+		return this.listaDeTarefasRepository.findOne(id);
+	}
+}

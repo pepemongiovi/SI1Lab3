@@ -1,0 +1,33 @@
+package si1lab3.model;
+
+import java.util.ArrayList;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+@Entity
+@Table(name = "TO_DO_LIST")
+public class ToDoList {
+	private String description;
+	private ArrayList<Task> tasks;
+	
+	public ToDoList(String description){
+		this.description = description;
+		this.tasks = new ArrayList<Task>();
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public ArrayList<Task> getTasks() {
+		return tasks;
+	}
+
+	public void setTasks(ArrayList<Task> tasks) {
+		this.tasks = tasks;
+	}
+}

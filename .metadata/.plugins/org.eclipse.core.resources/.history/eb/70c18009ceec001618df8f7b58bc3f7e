@@ -1,0 +1,51 @@
+package si1lab3.model;
+
+import java.util.ArrayList;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "SUBTASK")
+public class Subtask {
+	@Id
+	@Column(name="SUBTASK_ID")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@Column(name="DESCRIPTION")
+	private String description;
+
+	@Column(name="FINISHED")
+	private boolean finished;
+
+	public Subtask(){
+		//DEFAULT
+	}
+	
+	public Subtask(String description){
+		this.description = description;
+		this.finished = false;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	
+	public boolean isFinished() {
+		return finished;
+	}
+
+	public void setFinished(boolean finished) {
+		this.finished = finished;
+	}
+}

@@ -1,0 +1,19 @@
+package Controller;
+
+
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import Model.toDoList;
+
+@Controller
+public class ToDoListCtrl {
+	
+	@RequestMapping("/list")
+	public String list(Model model){
+		toDoList list = new toDoList("List test");
+		model.addAttribute("list", list);
+		return "listview";
+	}
+}

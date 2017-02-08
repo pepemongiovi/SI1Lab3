@@ -1,0 +1,10 @@
+package repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.javainuse.model.Employee;
+
+public interface TaskRepository extends JpaRepository<Employee
+			, Long> {
+
+}

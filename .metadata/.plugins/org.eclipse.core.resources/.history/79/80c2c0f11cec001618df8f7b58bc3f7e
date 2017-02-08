@@ -1,0 +1,5 @@
+package si1lab3.controller;
+
+public class PaginationController {
+
+}

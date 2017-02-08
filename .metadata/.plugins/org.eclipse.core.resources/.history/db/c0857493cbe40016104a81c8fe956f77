@@ -1,0 +1,25 @@
+package SI1Lab;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Controller;
+
+@Configuration
+@EnableAutoConfiguration
+@ComponentScan
+@Controller
+public class Si1LabApplication {
+	
+	@ResponseBody
+	@RequestMapping("/")
+	String entry(){
+		return "IT WORKS!!";
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(Si1LabApplication.class, args);
+	}
+}

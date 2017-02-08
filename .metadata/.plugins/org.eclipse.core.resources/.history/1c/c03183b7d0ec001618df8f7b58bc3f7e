@@ -1,0 +1,16 @@
+package si1lab3.model;
+
+public enum Priority {
+	HIGH("High"),
+	MEDIUM("Medium"),
+	LOW("Low");
+	
+	private String name;
+	private Priority(String name){
+		this.name = name;
+	}
+	public String getName(){
+		return this.name;
+	}
+	
+}

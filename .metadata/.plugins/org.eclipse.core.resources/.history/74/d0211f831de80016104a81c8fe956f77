@@ -1,0 +1,35 @@
+package service;
+
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import model.ToDoList;
+import repository.ToDoListRepository;
+
+@Service
+public class ToDoListService {
+	
+	@Autowired
+	private ToDoListRepository toDoListRepository;
+	
+	
+	
+	public ToDoList buscaPorId(Long id) {
+		return this.toDoListRepository.findOne(id);
+	}
+	
+	public Collection<ToDoList> buscaTarefas() {
+		return this.toDoListRepository.findAll();
+	}
+	
+	public ToDoList saveInDB(ToDoList toDoList) {
+		return toDoListRepository.save(toDoList);
+	}
+	
+	public void deleteTask(ToDoList task) {
+		this.toDoListRepository.delete(task);
+	}
+	
+}
